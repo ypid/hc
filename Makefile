@@ -26,11 +26,11 @@ list:
 
 ## Git hooks {{{
 .PHONY: install-pre-commit-hook
-install-pre-commit-hook: ./dev/hooks/pre-commit
+install-pre-commit-hook: ./tests/hooks/pre-commit
 	ln -srf "$<" "$(shell git rev-parse --git-dir)/hooks"
 
 .PHONY: run-pre-commit-hook
-run-pre-commit-hook: ./dev/hooks/pre-commit
+run-pre-commit-hook: ./tests/hooks/pre-commit
 	"$<"
 
 .PHONY: remove-pre-commit-hook
@@ -39,6 +39,9 @@ remove-pre-commit-hook:
 ## }}}
 
 ## check {{{
+.PHONY: check-quick
+check-quick: check-unit-tests check-docs check-lint-quick
+
 .PHONY: check
 check: check-unit-tests-with-coverage check-integration-tests check-docs check-lint
 
@@ -50,8 +53,11 @@ check-tox:
 check-docs:
 	$(MAKE) "docs" > /dev/null
 
+.PHONY: check-lint-quick
+check-lint-quick: check-flake8 check-travis.yml check-gitlab-ci.yml
+
 .PHONY: check-lint
-check-lint: check-flake8 check-pylint check-travis.yml check-gitlab-ci.yml
+check-lint: check-lint-quick check-pylint
 
 .PHONY: check-flake8
 check-flake8:

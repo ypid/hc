@@ -97,8 +97,7 @@ def get_args_parser():
     args_parser.add_argument(
         'output_file',
         help="Where to write the output file."
-        " '-' will write to STDOUT."
-        " If not given, no final output will be produced.",
+        " '-' will write to STDOUT.",
         metavar='output-file',
     )
     args_parser.add_argument(
@@ -122,8 +121,7 @@ def get_args_parser():
     )
     args_parser.add_argument(
         '-D', '--dry-run',
-        help="Don't write output."
-        " Default: %(default)s.",
+        help="Don't write output.",
         action="store_true",
     )
 

@@ -4,10 +4,6 @@
 schulferien.org interface
 """
 
-# Potential alternative sources:
-#
-# * http://www.schulferien.org/Schulferien_nach_Jahren/2016/schulferien_2016.html
-
 # pylint: disable=too-many-locals,too-many-nested-blocks,too-many-branches
 
 import os

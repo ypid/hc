@@ -2,6 +2,6 @@ CLI interface
 =============
 
 .. argparse::
-   :module: hc.cli_parser
+   :module: hc.cli
    :func: get_args_parser
    :prog: hc

@@ -19,7 +19,7 @@ import re
 sys.path.insert(0, os.path.abspath('..'))
 os.environ['PYTHONPATH'] = os.path.abspath('..')
 
-import hc
+import hc._meta
 
 #  import sphinx.apidoc
 #  sphinx.apidoc.main(['self', '--no-toc', '-o', 'api', '../hc'])

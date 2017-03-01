@@ -5,6 +5,10 @@ import re
 import os
 from setuptools import setup, find_packages
 
+import sys
+if sys.version_info[0] == 2:
+    from io import open
+
 here = os.path.abspath(os.path.dirname(__file__))
 
 __version__ = None

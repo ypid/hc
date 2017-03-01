@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 Meta information about hc
 """

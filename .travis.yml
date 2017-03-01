@@ -5,7 +5,6 @@ language: python
 
 python:
   # Should match the versions listed in ./setup.py
-  - "3.3"
   - "3.4"
   - "3.5"
   - "3.6"

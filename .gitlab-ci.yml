@@ -22,10 +22,6 @@ before_script:
     - 'make check'
 
 # Should match the versions listed in ./setup.py
-test:3.3:
-  <<: *test_template
-  image: 'python:3.3'
-
 test:3.4:
   <<: *test_template
   image: 'python:3.4'

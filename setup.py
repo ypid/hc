@@ -47,7 +47,9 @@ setup(
         # seems: https://travis-ci.org/ypid/hc/jobs/204811167
         # Dropping 3.2 from support matrix.
         #  'Programming Language :: Python :: 3.2',
-        'Programming Language :: Python :: 3.3',
+        # JSON dump contains trailing whitespace in 3.3.
+        # Dropping 3.3 from support matrix.
+        #  'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',

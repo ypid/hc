@@ -13,7 +13,8 @@ before_script:
   # - 'echo "deb http://httpredir.debian.org/debian stretch main" > /etc/apt/sources.list.d/stretch.list'
   # - 'apt-get update -qq'
   # - 'apt-get install -qq python3-pretty-yaml python-requests-cache python3-xmltodict python3-pyquery sphinx-rtd-theme-common'
-  - 'pip3 install -e ".[test]"'
+  - 'pip install .'
+  - 'pip3 install ".[test]"'
   - 'pip3 install -r docs/requirements.txt'
 
 .test_template: &test_template

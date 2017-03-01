@@ -10,6 +10,13 @@ Design principles
   PDFs. At least for Germany. This is an attempt to harvest holidays and
   convert them.
 
+* Free Software
+
+  All those APIs and tools mentioned in the previous point where found
+  useless for the use case of bundling holiday definitions for opening_hours.js_.
+
+  All sources and resources are provided under the `GNU Affero General Public License v3 (AGPL-3.0)`_. Enjoy.
+
 * Idempotent.
 
   The program can be run against it’s output and should not make any changes to

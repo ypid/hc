@@ -68,7 +68,7 @@ setup(
         'pyaml',
         'requests_cache',
         'xmltodict',
-        'PyQuery',
+        'pyquery',
         'appdirs',
         'python-dateutil',
     ],

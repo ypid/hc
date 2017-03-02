@@ -5,17 +5,20 @@ Design principles
 
 * Generic
 
-  When you look around in the Internet, you find hundreds of public and/or
+  When you look around on the Internet, you find hundreds of public and/or
   school holiday APIs, libraries, websites providing HTML calenders, iCALs,
-  PDFs. At least for Germany. This is an attempt to harvest holidays and
-  convert them.
+  PDFs, at least for Germany. Most of these have some artificial kind of limitation or restriction.
+  This is an attempt to harvest holidays (which are generally not copyright
+  protected), convert them and provide them without any limitations.
+
+  The available tools where found useless for the use case of bundling holiday
+  definitions for opening_hours.js_ which is why this tool has been written.
 
 * Free Software
 
-  All those APIs and tools mentioned in the previous point where found
-  useless for the use case of bundling holiday definitions for opening_hours.js_.
-
-  All sources and resources are provided under the `GNU Affero General Public License v3 (AGPL-3.0)`_. Enjoy.
+  All sources are provided under the `GNU Affero General Public License v3 (AGPL-3.0)`_.
+  Resources such as holiday data is released under a `Creative Commons Zero v1.0 Universal`_.
+  Enjoy.
 
 * Idempotent.
 

@@ -15,7 +15,7 @@ import json
 import datetime
 
 from appdirs import user_cache_dir
-from ruamel import yaml
+from ruamel import yaml  # pylint: disable=import-error
 
 from ._meta import __version__
 from .yaml import dump_holidays_as_yaml

@@ -4,13 +4,15 @@
 YAML representation
 """
 
+# pylint: disable=no-member
+
 from __future__ import absolute_import
 
 import io
 import re
 from collections import OrderedDict
 
-from ruamel import yaml
+from ruamel import yaml  # pylint: disable=import-error
 import pyaml
 
 from .datatypes import PhData, MonthDayList

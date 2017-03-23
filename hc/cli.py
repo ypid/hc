@@ -29,6 +29,7 @@ LOG = logging.getLogger(__name__)
 
 def get_args_parser():
     args_parser = argparse.ArgumentParser(
+        prog='hc',
         description=textwrap.dedent("""
             Holiday converter tool
         """),

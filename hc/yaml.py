@@ -34,25 +34,17 @@ PrettyHolidayYAMLDumper.add_representer(MonthDayList, PrettyHolidayYAMLDumper.re
 PrettyHolidayYAMLDumper.add_representer(PhData, PrettyHolidayYAMLDumper.represent_list)
 
 
-def dump_holidays_as_yaml(unserialized_data):
-    serialized_data = yaml.dump(
-        unserialized_data,
-        Dumper=PrettyHolidayYAMLDumper,
-        allow_unicode=True,
-        width=120,
-        explicit_start=True,
-        #  block_seq_indent=2,
-        #  indent=4,
-    )
+def get_clean_yaml(serialized_data, add_vspacing=False):
     serialized_buf = io.BytesIO(serialized_data.encode("utf-8"))
-    pyaml.dump_add_vspacing(serialized_buf, [1])
+    if add_vspacing:
+        pyaml.dump_add_vspacing(serialized_buf, [1])
 
     # Workaround: https://bitbucket.org/ruamel/yaml/issues/66/indentation-issue
     serialized_buf.seek(0)
     result = list()
     for line in serialized_buf:
         line = line.decode('utf-8')
-        line = re.sub(r'^(\s\s[-\s]\s)', r'  \1', line)
+        line = re.sub(r'^(\s\s[-\s]\s|-\s)', r'  \1', line)
         # https://gitlab.com/ypid/hc/builds/11250795
         # Not sure why but one of the dependency updates might have
         # broken/introduced trailing whitespace?!
@@ -62,6 +54,18 @@ def dump_holidays_as_yaml(unserialized_data):
     serialized_buf.truncate()
     serialized_buf.write(''.join(result).encode('utf-8'))
 
-    serialized_data = serialized_buf.getvalue().decode('utf-8')
+    return serialized_buf.getvalue().decode('utf-8')
 
-    return serialized_data
+
+def dump_holidays_as_yaml(unserialized_data, add_vspacing=True):
+    serialized_data = yaml.dump(
+        unserialized_data,
+        Dumper=PrettyHolidayYAMLDumper,
+        allow_unicode=True,
+        width=120,
+        explicit_start=True,
+        #  block_seq_indent=2,
+        #  indent=4,
+    )
+
+    return get_clean_yaml(serialized_data, add_vspacing=add_vspacing)

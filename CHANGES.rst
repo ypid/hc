@@ -10,7 +10,13 @@ and `human-readable changelog <http://keepachangelog.com/en/0.3.0/>`__.
 `hc master`_ - unreleased
 -------------------------
 
-.. _hc master: https://gitlab.com/ypid/hc/compare/v0.1.0...master
+.. _hc master: https://gitlab.com/ypid/hc/compare/v0.1.1...master
+
+
+`hc v0.1.1`_ - 2017-06-04
+-------------------------
+
+.. _hc v0.1.1: https://gitlab.com/ypid/hc/compare/v0.1.0...v0.1.1
 
 Changed
 ~~~~~~~

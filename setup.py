@@ -64,7 +64,7 @@ setup(
     keywords='school holidays schulferien germany',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     install_requires=[
-        'ruamel.yaml',
+        'ruamel.yaml<0.15',
         'pyaml',
         'requests_cache',
         'xmltodict',

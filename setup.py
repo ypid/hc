@@ -57,6 +57,7 @@ setup(
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Internet :: WWW/HTTP',
         'Topic :: Office/Business :: Scheduling',
         'Topic :: Text Processing :: Markup :: HTML',
@@ -64,7 +65,7 @@ setup(
     keywords='school holidays schulferien germany',
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     install_requires=[
-        'ruamel.yaml<0.15',
+        'ruamel.yaml',
         'pyaml',
         'requests_cache',
         'xmltodict',

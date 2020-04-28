@@ -157,9 +157,10 @@ class SchulferienOrg(object):
 
                         # Expect only the last holiday to wrap into the next year.
                         if sh_order.index(holiday_name) == len(sh_order)-1:
-                            if (str(year-1) in hol_def and hol_def[str(year-1)][-2] ==
-                                    day_before.month and hol_def[str(year-1)][-1] ==
-                                    day_before.day):
+                            if (str(year-1) in hol_def
+                                    and hol_def[str(year-1)][-2] == day_before.month
+                                    and hol_def[str(year-1)][-1] == day_before.day):
+
                                 hol_def[str(year-1)][-2] = month
                                 hol_def[str(year-1)][-1] = day
                                 continue
